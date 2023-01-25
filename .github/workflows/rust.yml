@@ -21,9 +21,7 @@ jobs:
     - name: Run tests
       run: cargo test --verbose
       
-      - name: Upload artifacts
-        uses: alexellis/upload-assets@0.2.3
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
+    - name: Upload artifacts
+      uses: alexellis/upload-assets@0.2.3
+      with:
           asset_paths: '["./**/*.tar.*","./**/*.7z","./**/*.zip","./**/*.apk","./**/*.aab","./**/"]'
