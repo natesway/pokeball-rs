@@ -21,7 +21,8 @@ jobs:
     - name: Run tests
       run: cargo test --verbose
       
-    - name: Upload artifacts
-      uses: alexellis/upload-assets@0.2.3
+    - name: Upload stuff
+      uses: actions/upload-artifact@v2
       with:
-          asset_paths: '["./**/*.tar.*","./**/*.7z","./**/*.zip","./**/*.apk","./**/*.aab","./**/"]'
+          name: Artifacts
+          path: ./
